@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicons  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png" />
+    <link rel="manifest" href="./favicons/site.webmanifest" />
+    <!-- favicons ends here -->
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--  css here-->
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>MY ToDo List</title>
+  </head>
+  <body>
+    <!-- header navbar  -->
+    <header>
+      <nav>
+       <img src="./Logo/png/Low Resolution Logo - Transparent Background.png" class="logo-img" alt="my-logo">
+       <h1 class="navbar-title">To Do List </h1>
+      </nav>
+    </header>
+    <!-- header navbar ends here -->
+    <!-- ToDo Container -->
+    <div class="container">
+      <!-- for todo input -->
+      <div class="todo-items">
+        <form class="todo-form">
+          <input type="text" class="todo-input" maxlength="40" placeholder="Type Here..." />
+          <button class="todo-button" type="submit">
+            <i class="fa-solid fa-plus-square"></i>
+          </button>
+        </form>
+        <div class="select-div">
+          <select name="select" id="select">
+            <option class="select-item" value="all">All</option>
+            <option class="select-item" value="completed">Completed</option>
+            <option class="select-item" value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
+      </div>
+      <div class="instructions">
+        <div>
+          <p class="alert">
+            <span>instructions :</span> Add items To See Here 
+          </p>
+        </div>
+      </div>
+      <!-- to contain all todos list -->
+      <div class="todo-container"></div>
+    </div>
+    <!--  -->
+  </body>
+</html>
