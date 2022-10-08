@@ -80,6 +80,9 @@ form {
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 form input , form button {
@@ -243,6 +246,7 @@ select{
 
 /* MEdia Queries */
 @media screen and (max-width:865px) {
+    
     .instructions {
         width: 80%;
     }
@@ -282,7 +286,7 @@ select{
     }
 
     form button {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 
     .instructions {
@@ -301,6 +305,10 @@ select{
 
     .navbar-title {
         font-size: 1.5rem;
+    }
+
+    form input, form button{
+        font-size: 1rem;
     }
 
 }
