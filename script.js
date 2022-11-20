@@ -9,12 +9,11 @@ const alert = document.querySelector('.alert')
 const select = document.getElementById('select')
 const myLogo = document.querySelector('.logo-img')
 
-
-
 // Global elemnts
 let todoItem;
 let editing = false;
 let editingItem;
+let editingItemDelelteBtn;
 
 
 // ===============================
@@ -63,6 +62,7 @@ todoButton.addEventListener('click', (event) => {
     }
 
     else if( todoInput.value !== '' && editing) {
+        editingItemDelelteBtn.classList.remove('disabled-item')
         editingItem.innerText = todoInput.value 
         Addalert('Your item Edited in the list', 'blue')
         setToDefault()
@@ -92,8 +92,8 @@ function Addalert(text,className){
 
     setTimeout(() => {
         alert.classList.remove(`alert-${className}`)
-        alert.innerHTML =  `<span>instructions:</span>Add items To See Here `
-    }, 2500);
+        alert.innerHTML =  `<span>instructions : </span> Add items To See Here `
+    }, 3000);
 }
 
 
@@ -148,9 +148,15 @@ todoContainer.addEventListener('click', (e)=> {
     // edit item
     if (e.target.classList.contains('fa-pen')){
         editing = true
+
+        editingItemDelelteBtn = itemss
+        editingItemDelelteBtn.classList.add('disabled-item')
+
         editingItem = itemss.firstElementChild;;
+    
         todoInput.value = editingItem.innerText;
-        Addalert(`You are Editing Now`, 'blue')
+        Addalert(`You are Editing Now. buttons of editing item will be disabled `, 'blue')
+
     }
 })
 

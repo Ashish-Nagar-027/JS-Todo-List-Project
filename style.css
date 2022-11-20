@@ -105,8 +105,8 @@ form button {
 }
 
 form button:hover {
-    background-color: #d88771;
-    color: white;
+    background-color: #6e83c7;
+    color: black;
 }
 
 
@@ -159,7 +159,7 @@ form button:hover {
 }
 
 .todo-item div i:hover {
-    background-color: #FBAB7E;
+    background-color: #6e83c7;
     color: black;
 
 }
@@ -243,6 +243,16 @@ select{
     padding: 1rem;
 }
 
+.disabled-item {
+    pointer-events:none;
+    background-color: rgb(252, 241, 241);
+    color: rgb(88, 79, 79);
+}
+
+.disabled-item  div, .disabled-item .fa-check,.disabled-item .fa-trash {
+
+  background-color: gray;
+}
 
 /* MEdia Queries */
 @media screen and (max-width:865px) {
